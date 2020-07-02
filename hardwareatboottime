@@ -1,0 +1,18 @@
+#!/bin/bash
+header()
+{
+	tput cup 3 20
+	echo -e "\33[33m *************************** \33[0m"
+	tput cup 4 20
+	echo -e "\33[33m  Welcome to ADMINIX Project \33[0m"
+	tput cup 5 20
+	echo -e "\33[32m *************************** \33[0m"
+}
+clear 
+tput cup 5 20  
+echo -e "\33[42m Info on Hardware Attached During the system Bootup \33[0m"
+cat /etc/sysconfig/hwconf |more
+tput cup 30 30
+echo -e "\33[43m  Press Enter to Return to main Menu \33[0m"
+tput cup 30 40
+read
